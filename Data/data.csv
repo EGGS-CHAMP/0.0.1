@@ -1,0 +1,5 @@
+Data summary:
+- Historical Yield (tons/m^2) per crop choice (corn, sorghum, wheat, and soybeans) for 2000-2014
+- Water use (m^3) and Water level change (m) for time series 2002-2021
+- Irrigated Area (m^2), Annual PRISM Precipitation (m), Water use (m^3), and Irrigation Depth (m)  for time series 2005-2021
+- Well ID, Status (active, inactive) Longitude, Latitude, Crop (corn, sorghum, wheat, and soybeans), Area (m^2), Water Use for Irrigation (m^3), Irrigation depth (m) for time series 2005-2021

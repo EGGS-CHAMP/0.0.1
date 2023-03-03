@@ -1,52 +1,43 @@
-CHAMP 0.0.1
+# CHAMP 0.0.1
 
-Objectives:
-- Gain familiarity with concepts and methods using simple models
-- Develop hypotheses and interesting findings to explore in more detail
-- Practice working together
-- Set data and model framework for further development
+**OBJECTIVES:**
+- Gain familiarity with concepts and methods using simple models.
+- Set data and model framework for further development.
+- Develop hypotheses and interesting findings to explore in more detail.
+- Examine emergent social-environmental phenomena caused by environmental heterogeneity.
 
-Main Tasks:
-1) Setup Github and Pycharm profiles
+**QUESTIONS - HYPOTHESES**
+- How does environmental heterogeneity affect the degree to which self-governing groundwater conservation programs?
+- Does above-ground or below-ground heterogeneity have a greater influence on groundwater use and conservation?
 
+**SCENARIOS**
+- Develop random heterogeneous fields of aquifer thickness and precipitation variability with different properties
+- Run simulations with just heterogeneous precip, just heterogeneous aquifer, and both heterogeneous
+- Run simulations with and without allowing cells to consider what is happening in neighboring cell when making decisions
 
-2) Scripting the framework for CHAMP for further implementation and development
-- Home/Setup script:
-  - Initialize CHAMP: Asks for name of project and which models to be used. Creates required folders for data management and each of the models 
-  - Continuation of previous CHAMP
-  - Setup and run CHAMP simulations
-- Data management script:
-  - Collects and organizes all the data for the models 
-  - Set parameters name for each model
-- Geographical model
-  - Setup of cellular automata (i.e. grid size, upstream/downstream, etc)
-  - Define coordinates, area size, elevation, etc. 
-- Climate models
-  - Data collection or climate models
-  - Estimation of climate parameters (PET, drought index, etc)
-  - Run statistics
-- Groundwater models
-  - KGS-WBM
-  - MODFLOW
-- Crop model
-  -SWB
-  -AquaCrop
-- Irrigation model
-  - Irrigation scheduling strategies (rainfed, continuous, decision table, GET-OPTIS, etc)
-- ABM
-  - Decision-making model
-  - Game theory model
-  - Netlogo/GAMA
+## Models
 
-3) Developing the simple models with the goal that passes the relevant information back and forth in simple environment
+### Crop model:
+Water supply - yield relationship (Stone et al. 2006)
+- Crops: Corn, Sorghum, Soybeans, and Wheat
+- Input: Precipitation (m), Irrigation (m), Farm Area (m^2)
+- Output: Yield (tons/m^2)
+- Simulation time step: Yearly
 
+### Groundwater model
+KGS-WBM Water use - water-level change relationship (Butler et al. 2018) 
+- Input: Initial water level (m), Water use (m^3), Farm area (m^2)
+- Output: Water level (m), Stable pumping rate (m^3), Net inflow (m^3) 
+- Simulation time step: Yearly
 
-4) Run scenarios to examine emergent social-environmental phenomena like environmental heterogeneity
-   - Develop random heterogeneous fields of aquifer thickness and precipitation variability with different properties
-   - Run simulations with just heterogeneous precip, just heterogeneous aquifer, and both heterogeneous
-   - Run simulations with and without allowing cells to consider what is happening in neighboring cell when making decisions
+### Irrigation model 
+Precipitation - Irrigation depth relationship (Glose et al. 2022)
+- Input: Precipitation (m), Irrigation strategy (Pre or Post LEMA), Farm area (m^2)
+- Output: Irrigation (m), Water use (m^3)
+- Simulation time step: Yearly
 
-
-5) Answer questions:
-   - How does heterogeneity affect the degree to which self-governing groundwater conservation programs develop and function?
-   - Does above-ground or below-ground heterogeneity have a greater influence on groundwater use and conservation?
+### Agent Based Model
+Consumat (Jager et al. 2000)
+- Input:
+- Output:
+- Simulation time step: Yearly
